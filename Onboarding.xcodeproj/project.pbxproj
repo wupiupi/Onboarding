@@ -51,8 +51,8 @@
 		A00551C72C21658900446E6E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				A00551C82C21658900446E6E /* OnboardingApp.swift */,
-				A00551CA2C21658900446E6E /* ContentView.swift */,
+				A00551D62C21659300446E6E /* App */,
+				A00551D82C2165DB00446E6E /* ContentView */,
 				A00551CC2C21658A00446E6E /* Assets.xcassets */,
 				A00551CE2C21658A00446E6E /* Preview Content */,
 			);
@@ -65,6 +65,22 @@
 				A00551CF2C21658A00446E6E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A00551D62C21659300446E6E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A00551C82C21658900446E6E /* OnboardingApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A00551D82C2165DB00446E6E /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				A00551CA2C21658900446E6E /* ContentView.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
