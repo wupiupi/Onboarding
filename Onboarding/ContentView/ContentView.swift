@@ -20,12 +20,13 @@ struct ContentView: View {
         ZStack {
             // Background image
             TabView(selection: $currentStep) {
-                ForEach(0..<onboardingSteps.count) { it in
-                    Image(onboardingSteps[it].image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .edgesIgnoringSafeArea(.all)
-                        .tag(it)
+                ForEach(onboardingSteps.indices, id: \.self) {
+                    OnboardingView(
+                        title: onboardingSteps[$0].title,
+                        description: onboardingSteps[$0].description,
+                        imageName: onboardingSteps[$0].image,
+                        backgroundColor: onboardingSteps[$0].backgroundColor
+                    )
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
