@@ -52,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				A00551D62C21659300446E6E /* App */,
+				A03C33D22C230FB8004C4E92 /* Components */,
 				A00551D82C2165DB00446E6E /* ContentView */,
 				A00551CC2C21658A00446E6E /* Assets.xcassets */,
 				A00551CE2C21658A00446E6E /* Preview Content */,
@@ -81,6 +82,14 @@
 				A00551CA2C21658900446E6E /* ContentView.swift */,
 			);
 			path = ContentView;
+			sourceTree = "<group>";
+		};
+		A03C33D22C230FB8004C4E92 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A03C33D32C230FC7004C4E92 /* CircularProgressBarView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00551CB2C21658900446E6E /* ContentView.swift in Sources */,
+				A03C33D42C230FC7004C4E92 /* CircularProgressBarView.swift in Sources */,
 				A00551C92C21658900446E6E /* OnboardingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
