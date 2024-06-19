@@ -15,7 +15,7 @@ struct CircularProgressBarView: View {
     var body: some View {
         ZStack {
             
-            Image("Icon_arrow")
+            Image("arrowIcon")
             
             Circle()
                 .stroke(lineWidth: 5)
