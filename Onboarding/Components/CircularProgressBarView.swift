@@ -30,7 +30,3 @@ struct CircularProgressBarView: View {
         }
     }
 }
-
-#Preview {
-    CircularProgressBarView(progress: .constant(0.3), color: .green)
-}
