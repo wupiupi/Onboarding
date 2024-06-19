@@ -46,7 +46,7 @@ struct StartView: View {
                     case (...0, -30...30):
                         viewModel.isNotLastStep
                         ? viewModel.incementProgress()
-                        : viewModel.resetProgress()
+                        : viewModel.skipProgress()
                         
                     // Right swipe
                     case (0..., -30...30):
@@ -81,7 +81,7 @@ struct StartView: View {
         Button {
             viewModel.isNotLastStep
             ? viewModel.incementProgress()
-            : viewModel.resetProgress()
+            : viewModel.skipProgress()
         } label: {
             CircularProgressBarView(progress: $viewModel.progressValue, color: .white)
                 .frame(width: 58, height: 58)
