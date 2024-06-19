@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-private let onboardingSteps = [
-    OnboardingStep(image: "img1", title: "Your first car without a driver's license", description: "Goes to meet people who just got their license"),
-    OnboardingStep(image: "img2", title: "test2", description: "test2"),
-    OnboardingStep(image: "img3", title: "test3", description: "test3"),
-    OnboardingStep(image: "img4", title: "test4", description: "test4")
-]
-
 struct ContentView: View {
     @State private var currentStep = 0
     @State private var progressValue: Float = 0
