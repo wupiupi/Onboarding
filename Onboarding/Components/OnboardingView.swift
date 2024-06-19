@@ -40,6 +40,7 @@ struct OnboardingView: View {
                             height: proxy.size.width + 50
                         )
                 }
+                .padding(.bottom, 75)
             }
         }
         .ignoresSafeArea()
