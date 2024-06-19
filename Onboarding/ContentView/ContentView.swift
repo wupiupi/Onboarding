@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - State Properties
     @State private var currentStep = 0
     @State private var progressValue: Float = 0
     
     // MARK: - Private Properties
     private let onboardingSteps = OnboardingStep.getSteps()
     
+    // MARK: - Body
     var body: some View {
         ZStack {
             // Background image
