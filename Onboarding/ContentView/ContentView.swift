@@ -7,12 +7,6 @@
 
 import SwiftUI
 
-struct OnboardingStep {
-    let image: String
-    let title: String
-    let description: String
-}
-
 private let onboardingSteps = [
     OnboardingStep(image: "img1", title: "Your first car without a driver's license", description: "Goes to meet people who just got their license"),
     OnboardingStep(image: "img2", title: "test2", description: "test2"),
