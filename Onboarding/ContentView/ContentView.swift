@@ -85,11 +85,10 @@ struct ContentView: View {
                                     progressValue = 0.25
                                 }
                         }
-                        .padding(.trailing)
                     }
                 }
-                .padding(.leading, 6)
-                .padding(.bottom, 40)
+                .padding([.leading, .trailing], 16)
+                .padding(.bottom, 20)
             }
         }
         .edgesIgnoringSafeArea(.all)
