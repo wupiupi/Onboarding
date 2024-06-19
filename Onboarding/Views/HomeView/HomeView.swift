@@ -17,6 +17,7 @@ struct HomeView: View {
                 .font(.title2)
                 .fontWeight(.black)
         }
+        .ignoresSafeArea()
     }
 }
 
