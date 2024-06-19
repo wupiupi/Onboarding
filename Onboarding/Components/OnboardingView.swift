@@ -8,11 +8,49 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    let title: String
+    let description: String
+    let imageName: String
+    let backgroundColor: Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { proxy in
+            ZStack {
+                Color(backgroundColor)
+                
+                VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 16) {
+                        Text(title)
+                            .font(.system(size: 28))
+                            .font(.custom("Abel", fixedSize: 28))
+                            .fontWeight(.light)
+                            .foregroundStyle(.white)
+                        
+                        Text(description)
+                            .font(.system(size: 22))
+                            .fontWeight(.light)
+                            .foregroundStyle(.white)
+                    }
+                    .padding()
+                    
+                    Image(imageName)
+                        .resizable()
+                        .frame(
+                            width: proxy.size.width,
+                            height: proxy.size.width + 50
+                        )
+                }
+            }
+        }
+        .ignoresSafeArea()
     }
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(
+        title: "Your first car without a driver's license",
+        description: "Goes to meet people who just got their license",
+        imageName: "img1",
+        backgroundColor: Color(hex: 0xF0CF69)
+    )
 }

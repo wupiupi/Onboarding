@@ -33,31 +33,10 @@ struct ContentView: View {
             .animation(.easeInOut(duration: 0.5), value: currentStep)
             
             VStack(alignment: .leading) {
-                Spacer()
-                
-                VStack(alignment: .leading) {
-                    Text(onboardingSteps[currentStep].title)
-                        .font(.system(size: 30))
-                        .fontWeight(.light)
-                        .foregroundStyle(.white)
-                        .padding(.bottom)
-                    
-                    Text(onboardingSteps[currentStep].description)
-                        .font(.system(size: 22))
-                        .fontWeight(.light)
-                        .foregroundStyle(.white)
-                }
-                .padding()
-                
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
-                
                 VStack {
                     // Indicator
                     HStack {
-                        ForEach(0..<onboardingSteps.count) { it in
+                        ForEach(onboardingSteps.indices, id: \.self) { it in
                             if it == currentStep {
                                 Rectangle()
                                     .frame(width: 25, height: 10)
