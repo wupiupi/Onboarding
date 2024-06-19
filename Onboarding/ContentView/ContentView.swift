@@ -22,6 +22,7 @@ private let onboardingSteps = [
 
 struct ContentView: View {
     @State private var currentStep = 0
+    @State private var progressValue: Float = 0
     
     init() {
         UIScrollView.appearance().bounces = false
@@ -89,6 +90,7 @@ struct ContentView: View {
                     HStack {
                         Button {
                             self.currentStep = onboardingSteps.count - 1
+                            progressValue = 1
                         } label: {
                             Text("Skip")
                                 .font(.system(size: 20))
@@ -102,13 +104,18 @@ struct ContentView: View {
                         Button {
                             if self.currentStep < onboardingSteps.count - 1 {
                                 self.currentStep += 1
+                                progressValue += 0.25
                             } else {
                                 self.currentStep = 0
+                                progressValue = 0.25
                             }
                         } label: {
-                            Text(currentStep < onboardingSteps.count - 1 ? "Next" : "Get started")
-                                .font(.title)
-                                .padding(16)
+                            CircularProgressBarView(progress: $progressValue, color: .white)
+                                .frame(width: 58, height: 58)
+                                .padding()
+                                .onAppear {
+                                    progressValue = 0.25
+                                }
                         }
                         .padding(.trailing)
                     }
