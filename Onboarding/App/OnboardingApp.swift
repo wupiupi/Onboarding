@@ -13,8 +13,12 @@ struct OnboardingApp: App {
     
     var body: some Scene {
         WindowGroup {
-            StartView()
-                .environmentObject(viewModel)
+            if viewModel.isCompleteTutorial {
+                HomeView()
+            } else {
+                StartView()
+                    .environmentObject(viewModel)
+            }
         }
     }
 }
