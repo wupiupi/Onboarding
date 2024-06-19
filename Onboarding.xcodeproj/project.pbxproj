@@ -53,6 +53,7 @@
 		A00551C72C21658900446E6E /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A0FF1C992C233A26006664F6 /* Models */,
 				A00551D62C21659300446E6E /* App */,
 				A03C33D22C230FB8004C4E92 /* Components */,
 				A00551D82C2165DB00446E6E /* ContentView */,
@@ -92,6 +93,13 @@
 				A03C33D32C230FC7004C4E92 /* CircularProgressBarView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A0FF1C992C233A26006664F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
