@@ -12,6 +12,7 @@
 		A00551CD2C21658A00446E6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00551CC2C21658A00446E6E /* Assets.xcassets */; };
 		A00551D02C21658A00446E6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00551CF2C21658A00446E6E /* Preview Assets.xcassets */; };
 		A03C33D42C230FC7004C4E92 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03C33D32C230FC7004C4E92 /* CircularProgressBarView.swift */; };
+		A0FF1C9B2C233A4E006664F6 /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FF1C9A2C233A4E006664F6 /* OnboardingStep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		A00551CC2C21658A00446E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A00551CF2C21658A00446E6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A03C33D32C230FC7004C4E92 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		A0FF1C9A2C233A4E006664F6 /* OnboardingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		A0FF1C992C233A26006664F6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A0FF1C9A2C233A4E006664F6 /* OnboardingStep.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			files = (
 				A00551CB2C21658900446E6E /* ContentView.swift in Sources */,
 				A03C33D42C230FC7004C4E92 /* CircularProgressBarView.swift in Sources */,
+				A0FF1C9B2C233A4E006664F6 /* OnboardingStep.swift in Sources */,
 				A00551C92C21658900446E6E /* OnboardingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
