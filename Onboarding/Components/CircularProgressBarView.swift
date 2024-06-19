@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TODO: - CHANGE ANIMATION METHOD
 struct CircularProgressBarView: View {
     @Binding var progress: Float
     var color: Color = .white
@@ -27,7 +26,7 @@ struct CircularProgressBarView: View {
                 .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
                 .foregroundStyle(color)
                 .rotationEffect(.degrees(270))
-                .animation(.easeInOut(duration: 1.0))
+                .animation(.easeInOut(duration: 0.5), value: progress)
         }
     }
 }
