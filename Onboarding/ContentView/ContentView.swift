@@ -11,9 +11,8 @@ struct ContentView: View {
     @State private var currentStep = 0
     @State private var progressValue: Float = 0
     
-    init() {
-        UIScrollView.appearance().bounces = false
-    }
+    // MARK: - Private Properties
+    private let onboardingSteps = OnboardingStep.getSteps()
     
     var body: some View {
         ZStack {
