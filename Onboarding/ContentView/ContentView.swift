@@ -33,7 +33,10 @@ struct ContentView: View {
             .animation(.easeInOut(duration: 0.5), value: currentStep)
             
             VStack(alignment: .leading) {
-                VStack {
+                
+                Spacer()
+                
+                VStack(spacing: -10) {
                     // Indicator
                     HStack {
                         ForEach(onboardingSteps.indices, id: \.self) { it in
@@ -42,22 +45,24 @@ struct ContentView: View {
                                     .frame(width: 25, height: 10)
                                     .cornerRadius(10)
                                     .foregroundStyle(.white)
-                                    .animation(.easeInOut(duration: 0.5), value: currentStep)
+                                    .animation(
+                                        .easeInOut(duration: 0.5),
+                                        value: currentStep
+                                    )
                             } else {
                                 Circle()
                                     .frame(width: 10, height: 10)
                                     .foregroundStyle(.white.opacity(0.5))
                             }
                         }
-                        
                         Spacer()
                     }
                     .padding(.leading)
-                    
+                                        
                     // Buttons
                     HStack {
                         Button {
-                            self.currentStep = onboardingSteps.count - 1
+                            currentStep = onboardingSteps.count - 1
                             progressValue = 1
                         } label: {
                             Text("Skip")
@@ -70,11 +75,11 @@ struct ContentView: View {
                         Spacer()
                         
                         Button {
-                            if self.currentStep < onboardingSteps.count - 1 {
-                                self.currentStep += 1
+                            if currentStep < onboardingSteps.count - 1 {
+                                currentStep += 1
                                 progressValue += 0.25
                             } else {
-                                self.currentStep = 0
+                                currentStep = 0
                                 progressValue = 0.25
                             }
                         } label: {
