@@ -9,4 +9,4 @@
  - Beautiful UI Design;
 
 ## Screenshots
-![First](https://imgur.com/a/jOJss6M) ![Second](https://imgur.com/a/sNaqmsy) ![Third](https://imgur.com/a/pacGZ14) ![Fourth](https://imgur.com/a/OUciuaF)
+![First](https://imgur.com/gaWKZV7) ![Second](https://imgur.com/cDqyacV) ![Third](https://imgur.com/eaQ6hD8) ![Fourth](https://imgur.com/ZMh49Ls)
