@@ -54,7 +54,7 @@ struct StartView: View {
                         ? viewModel.decrementProgress()
                         : viewModel.resetProgress()
                         
-                    /// I'm using pring in default case because user can swap up or down
+                    /// I'm using print in default case because user can swap up or down
                     /// so to avoid incorrect app work
                     default: print("no clue")
                 }

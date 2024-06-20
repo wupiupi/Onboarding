@@ -22,16 +22,15 @@ struct OnboardingView: View {
                     VStack(alignment: .leading, spacing: 16) {
                         Text(title)
                             .font(.system(size: 28))
-                            .font(.custom("Abel", fixedSize: 28))
-                            .fontWeight(.light)
+                            .fontWeight(.bold)
                             .foregroundStyle(.white)
                         
                         Text(description)
-                            .font(.system(size: 22))
+                            .font(.system(size: 20))
                             .fontWeight(.light)
                             .foregroundStyle(.white)
                     }
-                    .padding()
+                    .padding(.leading, 24)
                     
                     Image(imageName)
                         .resizable()
@@ -49,9 +48,9 @@ struct OnboardingView: View {
 
 #Preview {
     OnboardingView(
-        title: "Your first car without a driver's license",
-        description: "Goes to meet people who just got their license",
+        title: "Always there: more than 1000 cars in Tbilisi",
+        description: "Our company is a leader by the number of cars in the fleet",
         imageName: "img1",
-        backgroundColor: Color(hex: 0xF0CF69)
+        backgroundColor: Color(hex: 0xB7ABFD)
     )
 }
