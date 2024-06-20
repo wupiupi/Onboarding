@@ -15,6 +15,7 @@ struct OnboardingApp: App {
         WindowGroup {
             if viewModel.isCompleteTutorial {
                 HomeView()
+                    .transition(AnyTransition.scale.animation(.linear(duration: 0.3)))
             } else {
                 StartView()
                     .environmentObject(viewModel)
