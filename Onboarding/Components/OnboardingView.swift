@@ -11,46 +11,55 @@ struct OnboardingView: View {
     let title: String
     let description: String
     let imageName: String
-    let backgroundColor: Color
+    
+    var fontWeight: Font.Weight = .bold
     
     var body: some View {
         GeometryReader { proxy in
-            ZStack {
-                Color(backgroundColor)
-                
-                VStack(alignment: .leading) {
-                    VStack(alignment: .leading, spacing: 16) {
-                        Text(title)
-                            .font(.system(size: 28))
-                            .fontWeight(.bold)
-                            .foregroundStyle(.white)
-                        
-                        Text(description)
-                            .font(.system(size: 20))
-                            .fontWeight(.light)
-                            .foregroundStyle(.white)
-                    }
-                    .padding(.leading, 24)
+            
+            VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 12) {
+                    Text(title)
+                        .font(.system(size: 24))
+                        .fontWeight(fontWeight)
+                        .foregroundStyle(.white)
                     
-                    Image(imageName)
-                        .resizable()
-                        .frame(
-                            width: proxy.size.width,
-                            height: proxy.size.width + 50
-                        )
+                    Text(description)
+                        .font(.system(size: 18))
+                        .fontWeight(.regular)
+                        .foregroundStyle(.white)
                 }
-                .padding(.bottom, 75)
+                .multilineTextAlignment(.leading)
+                .padding([.leading, .trailing], 24)
+//                .frame(width: proxy.size.width - 24)
+                
+                // MARK: -  I'm Cooked. 💀💀💀
+                /// I was sitting on this task for like... 3 hours but idk
+                /// how to make image look nice on the all devices (iPhone SE)
+                /// maybe i should make switch case with Geometry Reader for
+                /// different devices? Is it a good solution?
+                Image(imageName)
+                    .resizable()
+                    .frame(width: proxy.size.width)
+                    .scaledToFit()
             }
         }
-        .ignoresSafeArea()
     }
 }
 
 #Preview {
-    OnboardingView(
-        title: "Always there: more than 1000 cars in Tbilisi",
-        description: "Our company is a leader by the number of cars in the fleet",
-        imageName: "img1",
-        backgroundColor: Color(hex: 0xB7ABFD)
-    )
+    ZStack {
+        Color.yellow
+        
+        OnboardingView(
+            title: "Always there: more than\n1000 cars in Tbilisi",
+            description: "Our company is a leader by the number of cars in the fleet",
+            imageName: "img1"
+        )
+    }
 }
+// Your first car without a driver's license
+// Goes to meet people who just got their license
+
+// Always there: more than\n1000 cars in Tbilisi
+// Our company is a leader by the number of cars in the fleet
