@@ -51,7 +51,7 @@ struct StartView: View {
         }
         /// I can't extract this to Custom Modifier. Any suggessions? pls🥺
         /// Btw swipes are working. But it's kinda hard on Emulator
-        /// All you need is to click and move mouse to the left or right
+        /// All you need is to click and move mouse to the left or right then release
         /// That should work!
         .gesture(DragGesture(minimumDistance: 2.0, coordinateSpace: .local)
             .onEnded { value in
